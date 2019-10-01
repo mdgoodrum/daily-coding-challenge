@@ -12,3 +12,5 @@ var productExceptSelf = function(nums) {
     }
     return nums.reverse();
 };
+
+// https://leetcode.com/problems/product-of-array-except-self/
