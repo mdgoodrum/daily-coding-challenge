@@ -3,21 +3,21 @@
  * @return {number}
  */
 var firstMissingPositive = function(nums) {
-    let smallestPositiveInteger = 1;
-    let done = false;
-    while(!done) {
-        let updateHappened = false;
-        for (let i = 0; i < nums.length; i++) {
-            if (nums[i] === smallestPositiveInteger) {
-                smallestPositiveInteger++;
-                updateHappened = true;
-            }
-        }
-        if (!updateHappened) {
-            done = true;
+    const result = [];
+
+    for (let i = 0; i < nums.length; ++i) {
+        if (nums[i] => 0) {
+            result[nums[i]] = true;
         }
     }
-    return smallestPositiveInteger;
+
+    for (let i = 1; i <= result.length; ++i) {
+        if (result[i] === undefined) {
+            return i;
+        }
+    }
+
+    return 1;
 };
 
 
